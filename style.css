@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background-color: white;
+}
+
+#container{
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header{
+    background-color: rgb(241, 85, 85);
+    height: 100px;
+    text-align: center;
+    font-size: 1.25em;
+    padding-top: 20px;
+}
+
+/* navigation */
+#dropdown{
+    text-align: center;
+    background-color: white;
+    height: 40px;
+    color: black;
+}
+
+#dropdown #menu-open{
+    display: block;
+    padding-top: 10px;
+    height: 40px;
+}
+
+#dropdown #menu-close{
+    display: none;
+    padding-top: 10px;
+    height: 40px;
+}
+
+#nav-menu{
+    background-color: white;
+    width: 100%;
+    height: 0px;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0px;
+    display: none;
+}
+
+nav ul li a{
+    padding-top: 8px;
+    display: block;
+    color: black;
+    border-top: black solid 2px;
+    text-decoration: none;
+    height: 35px;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* body content */
+#abstract{
+    background-image: url(images/record-blurb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    margin: auto;
+    width: 100%;
+    height: 100vw;
+}
+
+#abstract img{
+    display: none;
+}
+
+#abstract h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#abstract p{
+    margin: 20px;
+    color: white;
+}
+
+#content{
+    padding: 20px;
+}
+
+#content h1{
+    padding-top: 30px;
+    text-align: center;
+}
+
+#content p{
+    padding: 40px;
+}
+
+#collections{
+    display: grid;
+    grid-template-areas: "desc1"
+                         "desc2"
+                         "desc3"
+                         "desc4";
+}
+
+#collections p{
+    grid-area: desc;
+    margin: 10px;
+}
+
+#collections img{
+    grid-area: pic;
+    max-width: 150px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#collections .lyrics{
+    display: none;
+}
+
+.gallery{
+    margin-top: 20px;
+}
+
+.gallery a{
+    color: rgb(241, 85, 85);
+}
+
+.gallery:nth-last-of-type(even){
+    background-color: black;
+    color: white;
+}
+
+#desc-1{
+    grid-area: desc1;
+    display: grid;
+    grid-template-areas: "pic   desc";
+}
+
+#desc-2{
+    grid-area: desc2;
+    display: grid;
+    grid-template-areas: "pic   desc";
+}
+
+#desc-3{
+    grid-area: desc3;
+    display: grid;
+    grid-template-areas: "pic   desc";
+}
+
+#desc-4{
+    grid-area: desc4;
+    display: grid;
+    grid-template-areas: "pic   desc";
+}
+
+#about{
+    display: none;
+}
+
+#contact{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding-top: 17px;
+    height: 50px;
+    background-color: rgb(238, 194, 194);
+}
+
+
+/* -------- TABLET SIZE ---------- */
+
+@media only screen and (min-width: 700px){
+    
+    /* body styling */
+
+    body{
+        background-color: white;
+    }
+
+    #container{
+        background-color: rgb(241, 85, 85);
+    }
+
+    header{
+        width: 90%;
+        margin: auto;
+        background-color: white;
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    header h1{
+        margin-left: 40px;
+    }
+
+    #body-container{
+        min-height: 100vh;
+        width: 90%;
+        margin: auto;
+        background-color: white;
+    }
+
+    /* navigation */
+
+    #dropdown{
+        display: none;
+    }
+
+    #nav-menu{
+        height: 60px;
+        background-color: rgb(238, 194, 194);
+    }
+
+    #nav-list{
+        display: block;
+        height: 60px;
+        margin-left: 5%;
+    }
+
+    #nav-list li{
+        float: left;
+        margin-top: 5px;
+    }
+
+    #nav-list li a{
+        padding-top: 15px;
+        display: block;
+        color: white;
+        border-top: none;
+        text-decoration: none;
+        height: 50px;
+        width: 100px;
+        margin: auto;
+        margin-right: 10px;
+        background-color: black;
+    }
+
+    #nav-list a:hover{
+        color: black;
+        background-color: white;
+    }
+
+    /* body content */
+
+    #content{
+        margin-top: 0;
+    }
+
+    #abstract{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 40vw;
+        background-image: none;
+    }
+
+    #abstract-text{
+        width: 50%;
+    }
+
+    #abstract-text h1{
+        padding-top: 20px;
+    }
+
+    #abstract-text p{
+        margin-top: 10px;
+    }
+    
+    #abstract img{
+        display: block;
+        width: 50%;
+        height: 40vw;
+    }
+
+    #collections img{
+        max-width: 250px;
+    }
+
+    #about{
+        display: block;
+        margin: 20px;
+    }
+
+    #about-container #content{
+        grid-area: about-text;
+    }
+
+    #about img{
+        grid-area: about-image;
+        width: 35vw;
+        margin: auto;
+    }
+
+    #about-container{
+        display: grid;
+        grid-template-areas: "about-text    about-image";
+    }
+
+}
+
+/* -----------DESKTOP SIZE------------ */
+
+@media only screen and (min-width: 1200px){
+    #container{
+        width: 100%;
+        margin: auto;
+    }
+
+    #body-container{
+        width: 1140px;
+        margin: auto;
+        border-left: 40px solid black;
+        padding-top: 50px;
+    }
+
+    header{
+        width: 1140px;
+        border-left: 40px solid black;
+    }
+
+    #nav-list{
+        width: 1020px;
+        margin-left: 0;
+        margin: auto;
+    }
+
+    /* body content */
+
+    #abstract{
+        width: 1000px;
+        height: 500px;
+    }
+
+    #abstract-text{
+        margin: 50px;
+        font-size: 1.25em;
+    }
+
+    #abstract img{
+        width: 500px;
+        height: 500px;
+    }
+
+    #collections .lyrics{
+        text-align: center;
+        display: block;
+        grid-area: lyrics;
+        margin: 50px;
+    }
+
+    span{
+        font-size: 0.75em;
+    }
+
+    #desc-1{
+        grid-area: desc1;
+        display: grid;
+        grid-template-areas: "desc  pic  lyrics";
+    }
+    
+    #desc-2{
+        grid-area: desc2;
+        display: grid;
+        grid-template-areas: "lyrics  desc  pic";
+    }
+    
+    #desc-3{
+        grid-area: desc3;
+        display: grid;
+        grid-template-areas: "pic  lyrics  desc";
+    }
+    
+    #desc-4{
+        grid-area: desc4;
+        display: grid;
+        grid-template-areas: "desc  pic  lyrics";
+    }
+
+    #about img{
+        width: 300px;
+    }
+}
